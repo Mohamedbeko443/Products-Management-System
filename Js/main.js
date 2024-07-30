@@ -165,22 +165,22 @@ function priceRgx (){
 
 function catRgx (){
     var rgx = /^[A-z]{2,}.{0,}$/;
-    if (rgx.test(productCategory.value)){
-        productCategory.classList.remove('is-invalid');
-        productCategory.classList.add('is-valid');
+    if (rgx.test(productCat.value)){
+        productCat.classList.remove('is-invalid');
+        productCat.classList.add('is-valid');
     }else{
-        productCategory.classList.remove('is-valid');
-        productCategory.classList.add('is-invalid');
+        productCat.classList.remove('is-valid');
+        productCat.classList.add('is-invalid');
     }
 }
 
 function desRgx(){
     var rgx = /^.{3,}$/;
-    if (rgx.test(productDescription.value)){
-        productDescription.classList.add('is-valid');
-        productDescription.classList.remove('is-invalid');
+    if (rgx.test(productDes.value)){
+        productDes.classList.add('is-valid');
+        productDes.classList.remove('is-invalid');
     }else {
-        productDescription.classList.add('is-invalid');
-        productDescription.classList.remove('is-valid');
+        productDes.classList.add('is-invalid');
+        productDes.classList.remove('is-valid');
     }
 }
