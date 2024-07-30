@@ -155,11 +155,11 @@ function priceRgx (){
     if (rgx.test(productPrice.value)){
         productPrice.classList.remove('is-invalid');
         productPrice.classList.add('is-valid');
-        return true;
+        
     }else {
         productPrice.classList.remove('is-valid');
         productPrice.classList.add('is-invalid');
-        return false;
+        
     }
 }
 
@@ -168,11 +168,9 @@ function catRgx (){
     if (rgx.test(productCategory.value)){
         productCategory.classList.remove('is-invalid');
         productCategory.classList.add('is-valid');
-        return true;
     }else{
         productCategory.classList.remove('is-valid');
         productCategory.classList.add('is-invalid');
-        return false;
     }
 }
 
@@ -181,10 +179,8 @@ function desRgx(){
     if (rgx.test(productDescription.value)){
         productDescription.classList.add('is-valid');
         productDescription.classList.remove('is-invalid');
-        return true;
     }else {
         productDescription.classList.add('is-invalid');
         productDescription.classList.remove('is-valid');
-        return false;
     }
 }
