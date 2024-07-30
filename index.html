@@ -17,13 +17,13 @@
 
             <div class="content">
                 <label for="ProductName">Product Name :</label>
-                <input class="form-control mb-3" type="text"  id="ProductName">
+                <input class="form-control mb-3" type="text"  id="ProductName" oninput="nameRgx();" required>
                 <label for="ProductPrice">Product Price :</label>
-                <input class="form-control mb-3" type="text"  id="ProductPrice">
+                <input class="form-control mb-3" type="text"  id="ProductPrice" oninput="priceRgx();" required>
                 <label for="ProductDes">Product Des :</label>
-                <input class="form-control mb-3" type="text"  id="ProductDes">
+                <input class="form-control mb-3" type="text"  id="ProductDes" oninput="desRgx();" required>
                 <label for="ProductCat">Product Cat :</label>
-                <input class="form-control mb-3" type="text"  id="ProductCat">
+                <input class="form-control mb-3" type="text"  id="ProductCat" oninput="catRgx();" required>
                 <div class="buttons text-center mt-4">
                     <button class="btn btn-warning" onclick="action();" id="addUpdateButton">Add Product</button>
                 <button class="btn btn-danger ms-2" onclick="reset();">Reset</button>

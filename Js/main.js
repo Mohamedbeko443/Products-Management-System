@@ -1,5 +1,3 @@
-
-
 var productName = document.getElementById("ProductName");
 var productPrice = document.getElementById("ProductPrice");
 var productDes = document.getElementById("ProductDes");
@@ -24,7 +22,12 @@ else
 
 function action() {
 
-    if((addUpdateBtn.innerHTML == "Add Product") == true)
+    if((addUpdateBtn.innerHTML == "Add Product")
+    && nameRgx 
+    && priceRgx 
+    && desRgx 
+    && catRgx
+    )
     {
         addProduct();
     }
@@ -128,4 +131,60 @@ function updateProduct()
     displayProducts(productContainer);
     clearForm();
     addUpdateBtn.innerHTML = "Add Product";
+}
+
+
+function nameRgx (){
+    var rgx = /^[A-z]{2,}.{1,}$/;
+    if (rgx.test(productName.value)){
+        productName.classList.remove('is-invalid');
+        productName.classList.add('is-valid');
+        return true;
+    }else{
+        productName.classList.add('is-invalid');
+        productName.classList.remove('is-valid');
+        return false;
+    }
+}
+
+
+
+
+function priceRgx (){
+    var rgx = /^[1-9][0-9]{0,}$/;
+    if (rgx.test(productPrice.value)){
+        productPrice.classList.remove('is-invalid');
+        productPrice.classList.add('is-valid');
+        return true;
+    }else {
+        productPrice.classList.remove('is-valid');
+        productPrice.classList.add('is-invalid');
+        return false;
+    }
+}
+
+function catRgx (){
+    var rgx = /^[A-z]{2,}.{0,}$/;
+    if (rgx.test(productCategory.value)){
+        productCategory.classList.remove('is-invalid');
+        productCategory.classList.add('is-valid');
+        return true;
+    }else{
+        productCategory.classList.remove('is-valid');
+        productCategory.classList.add('is-invalid');
+        return false;
+    }
+}
+
+function desRgx(){
+    var rgx = /^.{3,}$/;
+    if (rgx.test(productDescription.value)){
+        productDescription.classList.add('is-valid');
+        productDescription.classList.remove('is-invalid');
+        return true;
+    }else {
+        productDescription.classList.add('is-invalid');
+        productDescription.classList.remove('is-valid');
+        return false;
+    }
 }
