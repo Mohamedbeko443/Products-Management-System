@@ -24,8 +24,15 @@
                 <input class="form-control mb-3" type="text"  id="ProductDes">
                 <label for="ProductCat">Product Cat :</label>
                 <input class="form-control mb-3" type="text"  id="ProductCat">
-                <button class="btn btn-warning" onclick="addProduct();">Add Product</button>
-                <button class="btn btn-danger ms-2" onclick="">Reset</button>
+                <div class="buttons text-center mt-4">
+                    <button class="btn btn-warning" onclick="action();" id="addUpdateButton">Add Product</button>
+                <button class="btn btn-danger ms-2" onclick="reset();">Reset</button>
+                </div>
+            </div>
+
+            <div class="search my-5 w-75 mx-auto">
+                <input type="text" class="form-control" id="inputSearch" placeholder="Search"
+                oninput="search(this.value)">
             </div>
 
             <div class="TableData mt-5">
