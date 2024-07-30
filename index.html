@@ -9,11 +9,11 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
-<body>
+<body class="bg-info">
 
-    <div class="FormControl bg-info py-5">
+    <div class="FormControl py-5">
         <div class="container ">
-            <h1 class="text-center mb-3">Form Data</h1>
+            <h1 class="text-center mb-3 ">Form Data</h1>
 
             <div class="content">
                 <label for="ProductName">Product Name :</label>
@@ -24,7 +24,8 @@
                 <input class="form-control mb-3" type="text"  id="ProductDes">
                 <label for="ProductCat">Product Cat :</label>
                 <input class="form-control mb-3" type="text"  id="ProductCat">
-                <button class="btn btn-warning">Add Product</button>
+                <button class="btn btn-warning" onclick="addProduct();">Add Product</button>
+                <button class="btn btn-danger ms-2" onclick="">Reset</button>
             </div>
 
             <div class="TableData mt-5">
@@ -35,42 +36,9 @@
                         <th>Price</th>
                         <th>Des</th>
                         <th>Cat</th>
-                        <th>Action</th>
+                        <th>Actions</th>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Oppo</td>
-                            <td>3000</td>
-                            <td>good</td>
-                            <td>Phone</td>
-                            <td>
-                                <button class="btn btn-success">Delete</button>
-                                <button class="btn btn-secondary">Update</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Oppo</td>
-                            <td>3000</td>
-                            <td>good</td>
-                            <td>Phone</td>
-                            <td>
-                                <button class="btn btn-success">Delete</button>
-                                <button class="btn btn-secondary">Update</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Oppo</td>
-                            <td>3000</td>
-                            <td>good</td>
-                            <td>Phone</td>
-                            <td>
-                                <button class="btn btn-success">Delete</button>
-                                <button class="btn btn-secondary">Update</button>
-                            </td>
-                        </tr>
+                    <tbody id="tableBody">
                     </tbody>
                 </table>
             </div>
